@@ -1,0 +1,254 @@
+/* General Styles */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+  margin: 0;
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  display: flex;
+  background-color: #f4f5f7;
+}
+
+.dashboard {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 260px;
+  background-color: #0066cc;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+  filter: brightness(0) invert(1); /* Convert any icon to white */
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+.side-icon{
+    
+  width: 25px;
+  height: 25px;
+  padding-top: 5px;
+  margin-right: 10px;
+  align-items: center;
+  filter: brightness(0) invert(1); /* Convert any icon to white */
+  transition: transform 0.2s ease, filter 0.2s ease;
+
+}
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-menu li {
+  margin: 15px 0;
+  
+}
+
+.sidebar-menu a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  padding-bottom: 10px;
+}
+
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.header {
+  background: white; 
+  padding: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-bar {
+  width: 50%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  margin-right: 300px;
+}
+.serch-icon{
+	height: 25px;
+	width: 25px;
+	color: white;
+}
+
+.header-icons .icon {
+  width: 30px;
+  height: 30px;
+  padding-right: 20px;
+  
+}
+
+.welcome-section {
+  background: white;
+  
+}
+
+.button{
+  background-color: #0066cc;
+  border: none;
+  color: white;
+  padding: 5px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 8px 2px;
+  cursor: pointer;
+  border-radius: 40px;
+
+}
+.button:hover {
+  transform: scale(1.1); 
+}
+.welcome-button{
+	justify-content: flex-end;
+	margin-left: 400px;
+}
+.welcome-content{
+	padding: 10px;
+	display: flex;
+	align-items: center;
+
+}
+.welcome-icon{
+	height: 50px;
+	width: 50px;
+
+}
+
+/* Content Grid */
+.content-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+/* Projects Section */
+.projects-section {
+ 
+  padding: 10px;
+ 
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.project-card {
+  background: #fff;
+  padding-left: 10px;
+  border-left: 5px solid darkorange ;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+p{
+
+	font-size: 15;
+	font-weight: 400;
+	color: grey;
+}
+/* Style for icons in project cards */
+.card-icons {
+  display: flex;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 10px; /* Add spacing between icons and text */
+}
+
+.card-icons img {
+  width: 20px; /* Icon size */
+  height: 20px;
+  margin-left: 10px; /* Spacing between icons */
+  cursor: pointer;
+  transition: transform 0.2s ease; /* Smooth hover effect */
+}
+
+.card-icons img:hover {
+  transform: scale(1.2); /* Slightly enlarge icons on hover */
+}
+
+
+/* Right Section (Announcements and Trending) */
+.right-section {
+  display: flex;
+  margin-right: 10px;
+  flex-direction: column;
+  gap: 5px;
+}
+
+
+.announcements-section
+{
+  background: white;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.announcement{
+   border-bottom: 1px solid grey ;
+}
+
+.trending-section {
+  background: white;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.trending-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.trending-section li {
+  margin: 10px 0;
+}
+.tranding-content{
+	display: flex;
+	margin-left: 10px;
+
+}
+.demo{
+	margin-left: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
